@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<title>Calculator</title>
+</head>
+<body style="background-image: url('images/calc.jpg')">
+	  <h1> AVG Works only if you putA "+" sign between numbers</h1>
+	<form name="Calc" class="main">
+
+		<div class="child boxMain">
+			<input type="text"   name="screen" >
+		</div>
+
+		<div class="child box1">
+			<input type="button" name="one"   value="1" onclick="Calc.screen.value += '1'"> 
+		</div>
+
+		<div class="child box2">
+			<input type="button" name="two"   value="2" onclick="Calc.screen.value += '2'">
+		</div>
+	
+		<div class="child box3"><input type="button" name="three"  value="3" onclick="Calc.screen.value += '3'"> 
+		</div>
+		<div class="child box4">
+			<input type="button" name="four"   value="4" onclick="Calc.screen.value += '4'"> 
+		</div>
+		<div class="child box5">
+			<input type="button" name="five"   value="5" onclick="Calc.screen.value += '5'">
+		</div>
+		<div class="child box6">
+			<input type="button" name="six" value="6" onclick="Calc.screen.value += '6'">
+			 </div>
+		<div class="child box7">
+			<input type="button" name="seven" value = '7' onclick="Calc.screen.value+= '7' ">
+		</div>
+		<div class="child box8">
+			<input type="button" name="eight" value = '8' onclick="Calc.screen.value+='8'">
+		</div>
+		<div class="child box9">
+			<input type="button" name="nine" value='9' onclick="Calc.screen.value+='9'">
+		</div>
+		<div class="child box0">
+			<input type="button" name="zero" value='0' onclick="Calc.screen.value+='0'">
+		</div>
+		<div class="child boxDiv">
+			<input type="button" name="divide" value='/' onclick="Calc.screen.value+= '/'">
+		</div>
+		<div class="child boxMul">
+			<input type="button" name="mult" value="x" onclick="Calc.screen.value+='*'">
+		</div>
+		<div class="child boxSub">
+			<input type="button" name="sub" value="-" onclick="Calc.screen.value+='-'">
+		</div>
+		<div class="child boxAdd">
+			<input type="button" name="plus"  value="+" onclick="Calc.screen.value+='+'">
+		</div>
+		<div class="child boxC">
+			<input type="button" name="delete" value="C" onclick="Calc.screen.value=''">
+		</div>
+		<div class="child boxEqual">
+			<input type="button" name="Equal"  value="=" onclick="Calc.screen.value = eval(Calc.screen.value)">
+		</div>
+		<div class="child avg">
+		 <input type="button" name="avg" value="avg" onclick="Calc.screen.value = averag()">
+		</div>
+		<div class="child sqrt">
+		 <input type="button" name="sqrt" value="sqrt" onclick="Calc.screen.value = Math.sqrt(Number(Calc.screen.value))">
+		</div>
+	</form>
+   
+
+	<script type="text/javascript">
+	/////average function/ doesnt work if you will input +  sign in between numbers	
+     function averag(){
+     let val =	Calc.screen.value;
+    let  avg = val.split('+') ;
+    let result=0;
+    console.log(avg)
+     for(i=0;i<avg.length;i++){
+     	if (avg[i]==='+' || avg[i]==='-' || avg[i]==='/' ||avg[i]==='*' ) {
+     		avg.splice(i);
+     	}else{
+     	result+=Number(avg[i]);
+     	console.log(result);
+     }
+     }
+      return result/avg.length;
+      console.log(result/avg.length);
+     }
+
+	</script>
+
+</body>
+</html>
+

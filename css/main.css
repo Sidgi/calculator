@@ -1,0 +1,96 @@
+.main{
+		width: 100%;
+		height: 500px;
+		display: grid;
+		grid-template-rows: auto;
+		justify-content: center;
+		align-content: center;
+		grid-template-areas: 
+		"boxMain boxMain sqrt avg"
+		"box1 box2 box3 boxAdd"
+		"box4 box5 box6 boxSub"
+		"box7 box8 box9 boxMul"
+		"boxEqual boxC box0  boxDiv"
+	}
+	.child{
+		font-size: 30pt;
+		padding: 10px;
+
+		background-color: blue;*/
+
+	}
+	.boxMain{
+		grid-area: boxMain;
+
+	}
+	.box1{
+		grid-area: box1;
+	}
+	.box2{
+		grid-area: box2;
+	}
+	.box3{
+		grid-area: box3;
+	}
+	.box4{
+         grid-area: box4;
+	}
+	.box5{
+         grid-area: box5;
+	}
+      
+	.box6{
+       grid-area: box6;
+	}
+	.box7{
+      grid-area: box7;
+	}
+	.box8{
+      grid-area: box8;
+	}
+	.box9{
+      grid-area: box9;
+	}
+	.box0{
+      grid-area: box0;
+	}
+
+	.boxC{
+		grid-area:boxC;
+	}
+	.boxAdd{
+        grid-area: boxAdd;
+	}
+	.boxEqual{
+         grid-area: boxEqual;
+	}
+	.boxSub{
+        grid-area: boxSub;
+	}
+	.boxMul{
+       grid-area: boxMul;
+	}
+	.boxDiv{
+       grid-area: boxDiv;
+	}
+	.avg{
+     grid-area: avg;
+	}
+	.div:hover{
+      background-color: black;
+	}
+	.sqrt{
+		grid-area: sqrt;
+	}
+
+	input{
+		border: solid black;
+		width: 100%;
+		height: 100%;
+		font-size: 15pt;
+	}
+	h1{
+		text-align: center;
+		font-weight: bold;
+	}
+
