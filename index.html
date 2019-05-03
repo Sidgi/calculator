@@ -6,7 +6,7 @@
 	<title>Calculator</title>
 </head>
 <body style="background-image: url('images/calc.jpg')">
-	  <h1> AVG Works only if you putA "+" sign between numbers</h1>
+	  <h1> AVG Works if you put "+ or - or / or *"  signs between the numbers</h1>
 	<form name="Calc" class="main">
 
 		<div class="child boxMain">
@@ -70,28 +70,31 @@
 		</div>
 	</form>
    
-
 	<script type="text/javascript">
-	/////average function/ doesnt work if you will input +  sign in between numbers	
-     function averag(){
-     let val =	Calc.screen.value;
-    let  avg = val.split('+') ;
-    let result=0;
-    console.log(avg)
-     for(i=0;i<avg.length;i++){
-     	if (avg[i]==='+' || avg[i]==='-' || avg[i]==='/' ||avg[i]==='*' ) {
-     		avg.splice(i);
-     	}else{
-     	result+=Number(avg[i]);
-     	console.log(result);
-     }
-     }
-      return result/avg.length;
-      console.log(result/avg.length);
-     }
-
+		let avg;
+		function averag(){
+			let val =	Calc.screen.value;
+			if(val.includes('-')){
+				avg = val.split('-') ;
+			}else if(val.includes('+')){
+				avg = val.split('+') ;
+			}else if(val.includes('/')){
+				avg = val.split('/') ;
+			}
+			else if(val.includes('*')){
+				avg = val.split('*') ;
+			}
+			let result=0;
+			for(i=0;i<avg.length;i++){
+				if (avg[i]==='+' || avg[i]==='-' || avg[i]==='/' ||avg[i]==='*' ) {
+					avg.splice(i);
+				}else{
+				result+=Number(avg[i]);
+					}
+			}
+			return result/avg.length;
+		}
 	</script>
-
 </body>
 </html>
 
